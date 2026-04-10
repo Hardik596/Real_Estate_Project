@@ -2,6 +2,8 @@ import streamlit as st
 import pickle
 import pandas as pd
 import numpy as np
+from joblib import load
+
 
 st.set_page_config(page_title="Price Predictor · PropIQ", page_icon="💰", layout="wide")
 
@@ -44,9 +46,7 @@ h3 { font-family: 'DM Serif Display', serif !important; color: #0d0d0d; }
 # ── Load ───────────────────────────────────────────────────────
 with open('df.pkl', 'rb') as f:
     df = pickle.load(f)
-with open('pipeline.pkl', 'rb') as f:
-    pipeline = pickle.load(f)
-
+pipeline = load('pipeline.pkl')
 # ── Header ─────────────────────────────────────────────────────
 st.markdown("# 💰 Price Predictor")
 st.markdown("Enter the property details below to get an estimated market price.")
