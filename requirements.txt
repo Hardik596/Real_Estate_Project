@@ -3,8 +3,3 @@ seaborn
 scikit-learn
 pandas
 numpy
-tensorflow
-keras
-fastapi 
-uvicorn 
-joblib
