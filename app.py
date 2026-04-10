@@ -6,7 +6,9 @@ st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap');
 html, body, [class*="css"] { font-family: 'DM Sans', sans-serif; }
-#MainMenu, footer, header { visibility: hidden; }
+#MainMenu { visibility: hidden; }  /* remove this if you want the menu */
+footer { visibility: hidden; }
+header { visibility: visible; }    /* keep header visible for navigation */
 .block-container { padding: 2.5rem 3rem; }
 
 h1 { font-family: 'DM Serif Display', serif !important; font-size: 2.6rem !important; color: #0d0d0d; line-height: 1.15 !important; }
@@ -215,4 +217,4 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.markdown('<hr class="divider">', unsafe_allow_html=True)
-st.markdown('<p style="text-align:center;color:#7a7a7a;font-size:13px">CampusX DSMP Capstone · Data from 99acres.com for educational purposes</p>', unsafe_allow_html=True)
+st.markdown('<p style="text-align:center;color:#7a7a7a;font-size:13px"> Data from 99acres.com for educational purposes</p>', unsafe_allow_html=True)
